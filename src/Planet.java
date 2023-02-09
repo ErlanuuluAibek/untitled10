@@ -14,9 +14,9 @@ public enum Planet {
         this.dayOfYear = dayOfYear;
     }
     public static void minDay(Planet []planets){
-        int san=Planet.PLUTO.dayOfYear;
+        int san=planets[0].dayOfYear;
         for (int i = 0; i < planets.length; i++) {
-            if(san>Planet.values()[i].dayOfYear){
+            if(san>planets[i].dayOfYear){
                 san=Math.min(san, planets[i].dayOfYear);
             }
         }
@@ -25,7 +25,7 @@ public enum Planet {
     public static void maxDay(Planet[] planets){
         int san=0;
         for (int i = 0; i < planets.length; i++) {
-            if(san<Planet.values()[i].dayOfYear){
+            if(san<planets[i].dayOfYear){
                 san=Math.max(san, planets[i].dayOfYear);
             }
         }
